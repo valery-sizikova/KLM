@@ -1,0 +1,22 @@
+[
+  {
+    "image": "../assets/dest1.png",
+    "description": "Image 00",
+    "text": "Image 1"
+  },
+  {
+    "image": "../assets/dest2.png",
+    "description": "Image 01",
+    "text": "Image 2"
+  },
+  {
+    "image": "../assets/dest3.png",
+    "description": "Image 02",
+    "text": "Image 3"
+  },
+  {
+    "image": "../assets/dest4.png",
+    "description": "Image 03",
+    "text": "Image 4"
+  }
+]

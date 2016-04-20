@@ -1,0 +1,115 @@
+.viewport {
+  width: 100%;
+  min-width: 320px;
+}
+
+.slides {
+  width: 100%;
+
+  @include respond-to('md') {
+    width: 80%;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  &:hover + .navigation {
+    .left-arrow, .right-arrow, .bullets {
+      visibility: visible;
+    }
+  }
+
+  .overlay-element {
+    width: 200px;
+    height: 150px;
+    background-color: #fff;
+    position: absolute;
+    top:0;
+    right: 200px;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+.navigation {
+  width: 100%;
+
+  @include respond-to('md') {
+    width: 80%;
+  }
+  .arrows {
+    width: 100%;
+    padding: 0 15px;
+    height: 80px;
+
+    .left-arrow, .right-arrow {
+      visibility: visible;
+      position: relative;
+      float: left;
+      font-size: 60px;
+      opacity: 0.6;
+      color: #fff;
+      margin-top: -40%;
+
+      @include respond-to('lg') {
+        visibility: hidden;
+        font-size: 80px;
+      }
+
+      &:hover {
+        visibility: visible;
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+    }
+
+    .right-arrow {
+      float: right;
+    }
+
+  }
+
+  .bullets {
+    pointer-events: none;
+    padding: 0;
+    margin: -112px auto 0;
+    width: calc(30px * 4);
+    visibility: visible;
+
+    @include respond-to('lg') {
+      visibility: hidden;
+    }
+
+    &:hover {
+      visibility: visible;
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    @include respond-to('md') {
+      pointer-events: auto;
+    }
+
+    .bullet {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      margin: 10px;
+      border: 1px solid #00BFFF;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .active {
+      background-color: #00BFFF;
+    }
+  }
+}

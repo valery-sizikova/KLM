@@ -1,0 +1,31 @@
+<div class="slides container"
+     ng-repeat="slide in vm.slides"
+     ng-if="vm.isCurrentSlide($index)">
+    <img ng-src="{{slide.image}}" class="slide">
+    <div class="overlay-element">
+        {{slide.text}}
+    </div>
+</div>
+
+<div class="navigation container">
+
+    <div class="arrows">
+        <div class="left-arrow"
+             ng-click="vm.previousSlide()">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </div>
+        <div class="right-arrow"
+             ng-click="vm.nextSlide()">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <ul class="bullets">
+        <li class="bullet"
+            ng-class="{'active': vm.isCurrentSlide($index)}"
+            ng-repeat="slide in vm.slides"
+            ng-click="vm.setCurrentSlide($index)">
+        </li>
+    </ul>
+
+</div>
